@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pomodoro Timer</h1>
+
+        <hr>
+        <p class="timer" id="timer">25:00</p>
+
+        <div class="button-wrapper">
+            <button id="start"><i class="ri-play-fill"></i>Start</button>
+            <button id="stop"><i class="ri-stop-fill"></i>Stop</button>
+            <button id="reset"><i class="ri-reset-left-line"></i></button>
+        </div>
+
+        <div class="task-container">
+            <button id="add"><i class="ri-add-large-line"></i>Add task</button>
+            <div id="task" class="task">
+                <h1 id="taskTitle">test</h1>
+                <p id="taskDescription">test</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
