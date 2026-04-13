@@ -39,3 +39,4 @@ const resetTimer = () => {
 start.addEventListener("click", startTimer);
 stop.addEventListener("click", stopTimer);
 reset.addEventListener("click", resetTimer);
+

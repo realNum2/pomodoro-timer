@@ -6,7 +6,7 @@
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
-
+    <script defer src="tasks.js"></script>
 </head>
 <body>
     <div class="container">
@@ -20,15 +20,14 @@
             <button id="stop"><i class="ri-stop-fill"></i>Stop</button>
             <button id="reset"><i class="ri-reset-left-line"></i></button>
         </div>
-
-        <div class="task-container">
-            <button id="add"><i class="ri-add-large-line"></i>Add task</button>
-            <div id="task" class="task">
-                <h1 id="taskTitle">test</h1>
-                <p id="taskDescription">test</p>
-            </div>
-        </div>
     </div>
+
+    <form onsubmit="event.preventDefault(); addNewTask();">
+        <h1>Tasks</h1>
+        <input type="text" id="newTaskInput" placeholder="New Task..."/>
+        <button class="submitButton" type="submit">Add</button>
+        <ul id="taskList"></ul>
+    </form>
     
 
     <script src="app.js"></script>
