@@ -9,12 +9,16 @@ function addNewTask() {
 
     const li = document.createElement("li");
 
+    const completedButton = document.createElement("button");
+    completedButton.innerHTML = '<i class="ri-check-fill"></i> Completed';
+    completedButton.className = "completedButton";
+
     const editButton = document.createElement("button");
-    editButton.textContent = "Edit";
+    editButton.innerHTML = '<i class="ri-pencil-line"></i> Edit';
     editButton.className = "editBtn";
 
     const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
+    deleteButton.innerHTML = '<i class="ri-delete-bin-fill"></i> Delete';
     deleteButton.className = "removeBtn";
 
     editButton.onclick = function () {
@@ -26,9 +30,15 @@ function addNewTask() {
         saveTask();
     };
 
+        completedButton.onclick = function () {
+        li.remove();
+        saveTask();
+    };
+
     const buttonContainer = document.createElement("div");
     buttonContainer.className = "task-buttons";
 
+    buttonContainer.appendChild(completedButton);
     buttonContainer.appendChild(editButton);
     buttonContainer.appendChild(deleteButton);
 

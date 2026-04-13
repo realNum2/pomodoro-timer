@@ -23,7 +23,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    color: #eaeaea;
+    color: #fff;
     background-color: rgba(255, 255, 255, 0.20);
     border-radius: 32px;
     padding: 40px 48px;
@@ -51,13 +51,13 @@ hr {
     gap: 16px;
 }
 
-button {
+#start, #stop, #reset {
     font-size: 24px;
     letter-spacing: 1px;
     padding: 16px 32px;
     border-radius: 360px;
     border: none;
-    color: #eaeaea;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ form {
 }
 
 h1 {
-    color: #eaeaea;
+    color: #fff;
     font-size: 1.5em;
 }
 
@@ -95,37 +95,55 @@ input[type=text], button {
     display: block;
     border: none;
     border-radius: 360px;
+    font-size: 14px;
 }
 
 .submitButton {
     cursor: pointer;
+    padding: 8px;
     background-color: #007fff;
     color: #eaeaea;
-    font-size: 17px;
+    font-size: 14px;
+    border-radius: 360px;
+    width: 100%;
+}
+
+.completedButton {
+    cursor: pointer;
+    background-color: #007fff;
+    padding: 8px;
+    color: #eaeaea;
+    font-size: 14px;
     border-radius: 360px;
     width: 100%;
 }
 
 .removeBtn {
     cursor: pointer;
-    background-color: #efeffb;
+    background-color: #fff;
+    padding: 8px;
     color: #ff3b30;
-    font-weight: bold;
-    font-size: 15px;
+    /* font-weight: bold; */
+    font-size: 14px;
     width: 100%;
 }
 
 .editBtn {
     cursor: pointer;
-    background-color: #efeffb;
+    background-color: #eaeaea;
+    padding: 8px;
     color: #007fff;
-    font-weight: bold;
-    font-size: 15px;
+    /* font-weight: bold; */
+    font-size: 14px;
     width: 100%;
 }
 
-.submitButton, .removeBtn, .editBtn {
+.submitButton, .removeBtn, .editBtn, .completedButton {
     margin: 8px 0;
+}
+
+.submitButton i, .removeBtn i, .editBtn i, .completedButton i {
+    font-size: 20px;
 }
 
 ul {
@@ -135,13 +153,14 @@ ul {
 }
 
 li {
-    background-color: #efeffb;
+    background-color: #fff;
     padding: 10px;
     margin: 5px 0;
     border-radius: 16px;
     color: #151515;
     white-space: pre-wrap;
     word-wrap: break-word;
+    font-size: 20px;
 }
 
 
