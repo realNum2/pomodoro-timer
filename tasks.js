@@ -30,10 +30,19 @@ function addNewTask() {
         saveTask();
     };
 
-        completedButton.onclick = function () {
-        li.remove();
-        saveTask();
-    };
+    completedButton.addEventListener("click", () => {
+        buttonContainer.classList.add('fade-out');
+
+        buttonContainer.addEventListener('transitionend', () => {
+            buttonContainer.remove();
+        });
+    });
+
+    //     completedButton.onclick = function () {
+
+
+    //         buttonContainer.remove();
+    // }
 
     const buttonContainer = document.createElement("div");
     buttonContainer.className = "task-buttons";
@@ -85,4 +94,4 @@ function loadTasks() {
     });
 }
 
-window.onload = loadTasks;
+window.onload = loadTasks();
