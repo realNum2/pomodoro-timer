@@ -22,11 +22,12 @@ const startTimer = () => {
             clearInterval(interval);
             alert("Time is up!");
             timeLeft = 1500;
-            updateTimer;
+            updateTimer();
         }
     },
          1000)
 };
+
 
 const stopTimer = () => clearInterval(interval);
 
@@ -39,5 +40,3 @@ const resetTimer = () => {
 start.addEventListener("click", startTimer);
 stop.addEventListener("click", stopTimer);
 reset.addEventListener("click", resetTimer);
-
-if (interval) true;

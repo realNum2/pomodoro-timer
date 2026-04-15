@@ -38,12 +38,6 @@ function addNewTask() {
         });
     });
 
-    //     completedButton.onclick = function () {
-
-
-    //         buttonContainer.remove();
-    // }
-
     const buttonContainer = document.createElement("div");
     buttonContainer.className = "task-buttons";
 
@@ -88,8 +82,12 @@ function loadTasks() {
     const list = document.getElementById('taskList');
 
     tasks.forEach(text => {
-        const li = document.createElement("text");
+        const li = document.createElement("li");
+        const span = document.createElement("span");
 
+        span.textContent = text;
+
+        li.appendChild(span);
         list.appendChild(li);
     });
 }
