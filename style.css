@@ -51,7 +51,7 @@ hr {
     gap: 16px;
 }
 
-#start, #stop, #reset {
+#start, #stop, #reset, #settings {
     font-size: 24px;
     letter-spacing: 1px;
     padding: 16px 32px;
@@ -68,6 +68,9 @@ hr {
     background-color: #ff3b30;
 }
 #reset {
+    background-color: #007fff;
+}
+#settings {
     background-color: #007fff;
 }
 

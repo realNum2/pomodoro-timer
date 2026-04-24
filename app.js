@@ -14,12 +14,15 @@ const updateTimer = () => {
 };
 
 const startTimer = () => {
+    if (interval) return;
+
     interval = setInterval(() => {
         timeLeft--;
         updateTimer();
 
         if(timeLeft === 0){
             clearInterval(interval);
+            interval = null;
             alert("Time is up!");
             timeLeft = 1500;
             updateTimer();
@@ -29,10 +32,14 @@ const startTimer = () => {
 };
 
 
-const stopTimer = () => clearInterval(interval);
+const stopTimer = () => {
+    clearInterval(interval);
+    interval = null;
+};
 
 const resetTimer = () => {
     clearInterval(interval);
+    interval = null
     timeLeft = 1500;
     updateTimer();
 };
@@ -40,3 +47,7 @@ const resetTimer = () => {
 start.addEventListener("click", startTimer);
 stop.addEventListener("click", stopTimer);
 reset.addEventListener("click", resetTimer);
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then(() => console.log("SW registered"));
+}
